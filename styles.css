@@ -25,17 +25,18 @@
     flex-direction: row;
     bottom: 8px;
     width: 100%;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
+    align-content: center;
 }
 .footer-left{
     display: flex;
     justify-content: space-between;
+    align-content: center;
 }
 .footer-right{
     display: flex;
     justify-content: space-between;
-
+    align-content: center;
 }
 .column{
     flex-direction: column;
