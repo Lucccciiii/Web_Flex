@@ -1,0 +1,56 @@
+.linkdisperse{
+    display: flex;
+    justify-content: space-between;
+}
+#content-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.text{
+    flex:2 1 66%;
+}
+.image{
+    flex:1 1 33%;
+    background: blue;
+}
+
+.image img{
+    width: auto;
+}
+
+.bottomcontent{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    bottom: 8px;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.footer-left{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-right{
+    display: flex;
+    justify-content: space-between;
+
+}
+.column{
+    flex-direction: column;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+}
+
+.column2{
+    flex-direction: column;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+}
+
+.row{
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 100%
+}
