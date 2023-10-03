@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+<link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 </head>
 <body>
+<div class="logincontainer">
+    <div class="logincontainer2">
+
+        <div id="username">
+            <form method="post" action="login.php">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        </div>
+
+        <div id="password">
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* Index styling */
 .linkdisperse{
     display: flex;
     justify-content: space-between;
@@ -54,4 +55,29 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex: 1 1 100%
+}
+
+/* Login Styling */
+
+#logincontainer{
+    height: 10em;
+    display: flex;
+    align-content: center;  
+}
+#logincontainer div{
+    margin: 0;
+}
+#logincontainer2{
+    align-content: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+}
+.username{
+    padding:20px;
+}
+
+.password{
+    flex-grow: 2;
 }
