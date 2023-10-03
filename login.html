@@ -7,24 +7,18 @@
     <title>Login</title>
 </head>
 <body>
-<div class="logincontainer">
-    <div class="logincontainer2">
+    <main id="logincontainer">
+        <form id="logincontainer2" method="post" action="login.php">
 
-        <div id="username">
-            <form method="post" action="login.php">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        </div>
+            <label class="username" for="uname"><b>Username</b></label>
+            <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
 
-        <div id="password">
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        </div>
-        <button type="submit">Submit</button>
+            <label class="password" for="psw"><b>Password</b></label>
+            <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+
+            <input type="submit"></input>
+
         </form>
-    </div>
-</div>
-
-
+    </main>
 </body>
 </html>
