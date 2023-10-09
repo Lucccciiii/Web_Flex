@@ -80,3 +80,25 @@
 .password{
     flex-grow: 2;
 }
+
+/* Forum Styling */
+
+#topbar{
+    display: flex;
+    justify-content: center;
+}
+
+#forum-title{
+    flex: 1 1 auto;
+
+}
+#notification{
+    flex: 1 1 auto;
+}
+
+#account{
+    flex: 1 1 auto;
+}
+
+.settings{
+}
