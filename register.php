@@ -5,12 +5,16 @@ $dbpassword = "";
 $dbname = "flex_webdb";
 
 $id = "0";
-if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
+if(isset($_POST['submit'])){
     $username = $_POST["uname"];
     $password = $_POST["psw"];
+    $passwordv =$_POST["psw2"];
 }
 $username = $_POST["uname"];
 $password = $_POST["psw"];
+$passwordv = $_POST["psw2"];
+
+
 
 $passwordscram = password_hash($password, PASSWORD_DEFAULT);
 

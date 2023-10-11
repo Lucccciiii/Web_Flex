@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2023-10-09T12:43:55.210Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="5RW-BDwDCIUO5-GvB9yE" version="22.0.2" type="device">
+  <diagram name="Pagina-1" id="ZpypqyKcr7MPu883zYIJ">
+    <mxGraphModel dx="1036" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-1" value="Forumnaam&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;titel van gebruiker gebruikersnaam" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="187" y="40" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-2" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="110" y="160" width="454" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-3" value="Laatste berichten" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="287" y="270" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="160" width="140" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-5" value="Jouw interesses" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="665" y="170" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-6" value="Jouw berichten" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="662.5" y="315" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-8" value="Account instellingen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-9" value="Nieuw bericht" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="254" y="170" width="166" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4z9B6UtgKSCaf90EIJoE-11" value="notificaties" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="40" width="70" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
