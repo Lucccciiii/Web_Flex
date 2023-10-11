@@ -25,5 +25,6 @@ $insert_user = $conn->prepare("INSERT INTO users (user, password) VALUES (:usern
 $insert_user->bindParam(":username", $username);
 $insert_user->bindParam(":password", $passwordscram);
 $insert_user->execute();
+
 echo $username, " ", $passwordscram;
 

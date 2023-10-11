@@ -80,16 +80,37 @@
 .password{
     flex-grow: 2;
 }
+#registercontainer{
+    display: flex;
+    min-height: 600px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#registercontainer2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.username{
+
+}
+
+.password{
+    flex-grow: 2;
+}
 
 /* Forum Styling */
 
 #topbar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #forum-title{
-    flex: 1 1 auto;
+    flex: 1 1 75%;
 
 }
 #notification{
@@ -101,4 +122,23 @@
 }
 
 .settings{
+}
+
+/* Container used for text on the bottom of the screen */
+#container {
+    position:relative;
+}
+#container > * {
+    position:absolute;
+}
+.bottomright{
+    position:fixed;
+    bottom:0px;
+    right:16px;
+    font-size:18px;
+}
+.bottom{
+    position:fixed;
+    bottom:0px;
+    font-size:18px;
 }
