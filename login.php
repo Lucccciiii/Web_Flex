@@ -1,20 +1,30 @@
 <?php
 $servername = "localhost";
-$dbusername = "username";
-$dbpassword = "password";
-$dbname = "Flex_webDB";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "flex_webdb";
 
+$id = "0";
 $username = $_POST["uname"];
 $password = $_POST["psw"];
-$passwordscram = "";
 
-$conn = new mysqli($servername, $dbusername, $dbname);
+$passwordscram = password_hash($password, PASSWORD_DEFAULT);
 
-if ($conn->connect_error){
-    die("Connection Failed: " . $conn->connect_error);
+try {
+    $conn = new PDO("mysql:host=localhost;dbname=flex_webdb", $dbusername, $dbpassword);
+
+}catch (PDOException $error){
+    echo $error->getMessage();
 }
 
-$sql = "INSERT INTO users(id,user,password)
-VALUES (0,$username,$passwordscram);";
+$insert_user = $conn->prepare("INSERT INTO users (user, password) VALUES (:username, :password)");
+$insert_user->bindParam(":username", $username);
+$insert_user->bindParam(":password", $passwordscram);
+$insert_user->execute();
 
-echo $username, " ", $password;
+//if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
+//    $username = $_POST["uname"];
+//    $password = $_POST["psw"];
+//}
+//echo $username, " ", $passwordscram;
+
