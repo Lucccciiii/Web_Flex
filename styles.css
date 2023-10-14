@@ -120,12 +120,17 @@
 
 #topbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #forum-title{
     flex: 1 1 75%;
+    justify-content: center;
 
+}
+#right-top-bar{
+    display: flex;
+    flex: 1 1 auto;
 }
 #notification{
     flex: 1 1 auto;

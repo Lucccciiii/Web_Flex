@@ -3,10 +3,8 @@ $servername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
 $dbname = "flex_webdb";
-$id = "0";
 if(isset($_POST)) /*Checks if posts are submitted via form*/{
 
-    echo "ysad";
     $username = $_POST["uname"];
     $password = $_POST["psw"];
     $passwordv =$_POST["psw2"];
@@ -23,7 +21,7 @@ $passwordv = $_POST["psw2"]; /*gets value to verify from html post*/
 $passwordscram = password_hash($password, PASSWORD_DEFAULT); /*Hashes the users password for safe storage in database*/
 
 try {
-    $conn = new PDO("mysql:host=localhost;dbname=flex_webdb", $dbusername, $dbpassword);
+    $conn = new PDO("myscql:host=localhost;dbname=flex_webdb", $dbusername, $dbpassword);
 
 }catch (PDOException $error){
     echo $error->getMessage();
