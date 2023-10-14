@@ -1,5 +1,5 @@
 setInterval(function () {
-    d = new Date();
+    const d = new Date();
     let h = d.getHours();
     h = ("0"+ h).slice(-2);
     let m = d.getMinutes();

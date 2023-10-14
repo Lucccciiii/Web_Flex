@@ -1,3 +1,17 @@
+/* Fonts */
+#fonts{
+
+}
+.arial{
+    font-family: "Arial";
+}
+.times{
+    font-family: "Times New Roman";
+}
+
+
+
+
 /* Index styling */
 .linkdisperse{
     display: flex;
