@@ -17,11 +17,13 @@ $title = "Admin";
                 <?php echo "Welkom bij TraceNook &nbsp;", $title, $username?>
             </h1>
         </div>
-        <div id="notification">
-            <a href="notifications.html">Notifications</a>
-        </div>
-        <div id="account">
-            <a href="settings.html"><button class="settings">settings</button></a>
+        <div id="right-top-bar">
+            <div id="notification">
+                <a href="notifications.html">Notifications</a>
+            </div>
+            <div id="account">
+                <a href="settings.html"><button class="settings">settings</button></a>
+            </div>
         </div>
     </div>
     <div id="newpost">
