@@ -4,11 +4,10 @@ $dbusername = "root";
 $dbpassword = "";
 $dbname = "flex_webdb";
 
-if(isset($_POST['submit']))/*Confirms input is send via Submit*/{
+if(isset($_POST))/*Checks for post*/{
     $username = $_POST["uname"];
     $password = $_POST["psw"];
 }
-
 try {
     $conn = new PDO("mysql:host=localhost;dbname=flex_webdb", $dbusername, $dbpassword);
 
@@ -26,7 +25,7 @@ if (is_array($verify))/*Checks if the $verify is an array*/{
     if (password_verify($password,$verify['password']))/*Verifies if the user inputted password is the same as the password saved in database*/{
         $_SESSION['uname'] = $username; // $username coming from the form, such as $_POST['username']
 
-        header("Location: forum.html");
+        header("Location: forum.php");
     }
     else {
         header("Location: login.html");

@@ -7,7 +7,7 @@ $dbusername = "root";
 $dbpassword = "";
 $dbname = "flex_webdb";
 
-$username = "";
+$username = $_SESSION[$username];
 
 try {
     $conn = new PDO("mysql:host=localhost;dbname=flex_webdb", $dbusername, $dbpassword);

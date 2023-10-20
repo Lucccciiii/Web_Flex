@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum Hoofdpagina</title>
 </head>
+<?php
+$username = "Admin";
+$title = "Admin";
+?>
 <body>
     <div id="topbar">
         <div id="forum-title">
             <h1>
-                <pre>Welkom bij TraceNook,            [titel] [username]</pre>
+                <?php echo "Welkom bij TraceNook &nbsp;", $title, $username?>
             </h1>
         </div>
         <div id="notification">
