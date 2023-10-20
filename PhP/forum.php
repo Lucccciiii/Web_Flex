@@ -12,6 +12,7 @@ $title = "Admin";
 ?>
 <body>
     <div id="topbar">
+        <img src="Tracenook-ico.png">
         <div id="forum-title">
             <h1>
                 <?php echo "Welkom bij TraceNook &nbsp;", $title, $username?>

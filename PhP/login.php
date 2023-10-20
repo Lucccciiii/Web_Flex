@@ -4,7 +4,8 @@ $dbusername = "root";
 $dbpassword = "";
 $dbname = "flex_webdb";
 
-if(isset($_POST))/*Checks for post*/{
+/*Checks for post*/
+if(isset($_POST)){
     $username = $_POST["uname"];
     $password = $_POST["psw"];
 }
@@ -14,15 +15,15 @@ try {
 }catch (PDOException $error){
     echo $error->getMessage();
 }
-
-$login_user = $conn->prepare ("SELECT * FROM users WHERE user = :username "); /*Selects user for verification of the user's password */
+/*Selects user for verification of the user's password */
+$login_user = $conn->prepare ("SELECT * FROM users WHERE user = :username ");
 $login_user->bindparam(":username", $username);
 $login_user->execute();
 
 $verify = $login_user->fetch(PDO::FETCH_ASSOC); /*Fetches associated values for user's username*/
 
-if (is_array($verify))/*Checks if the $verify is an array*/{
-    if (password_verify($password,$verify['password']))/*Verifies if the user inputted password is the same as the password saved in database*/{
+if (is_array($verify)){
+    if (password_verify($password,$verify['password'])){
         $_SESSION['uname'] = $username; // $username coming from the form, such as $_POST['username']
 
         header("Location: forum.php");
@@ -32,4 +33,4 @@ if (is_array($verify))/*Checks if the $verify is an array*/{
     }
 }
 
-$con=null; /*Terminates database connection*/
+$con=null;

@@ -3,8 +3,9 @@ $servername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
 $dbname = "flex_webdb";
-if(isset($_POST)) /*Checks if posts are submitted via form*/{
 
+/*Checks for post */
+if(isset($_POST)) {
     $username = $_POST["uname"];
     $password = $_POST["psw"];
     $passwordv =$_POST["psw2"];
@@ -16,8 +17,6 @@ $username = $_POST["uname"]; /*gets value for username from html post*/
 $password = $_POST["psw"];   /*gets value for password from html post*/
 $passwordv = $_POST["psw2"]; /*gets value to verify from html post*/
 
-
-
 $passwordscram = password_hash($password, PASSWORD_DEFAULT); /*Hashes the users password for safe storage in database*/
 
 try {
@@ -27,18 +26,14 @@ try {
     echo $error->getMessage();
 }
 
-//SELECT * FROM USERS WHERE name = uname
-
-$verify_username = $conn->prepare("SELECT user FROM users")/*Gets all usernames from database for verification*/;
+/*Gets all usernames from database for verification*/
+$verify_username = $conn->prepare("SELECT user FROM users");
 $verify_username->execute();
 $verify=$verify_username->fetch(PDO::FETCH_ASSOC);
 
-//if verify username > 0
-//Then user exists
-
 if(is_array($verify)){
-
-    if($verify["user"] === $username)/*Checks if username is already in database*/ {
+    /*Checks if username is already in database*/
+    if($verify["user"] === $username){
         header("Location: register.html");
     }
     else{
@@ -46,7 +41,7 @@ if(is_array($verify)){
     }
 }
 
-if ($password === $passwordv) /*Checks if password is the same as the second password*/{
+if ($password === $passwordv){
 $insert_user = $conn->prepare("INSERT INTO users (user, password) VALUES (:username, :password)");
 $insert_user->bindParam(":username", $username);
 $insert_user->bindParam(":password", $passwordscram);
@@ -57,6 +52,4 @@ else {
     header("Location: register.html");
 }
 
-echo $username, " ", $passwordscram;
-
-$conn=null;/*Terminates database connection*/
+$conn=null;
