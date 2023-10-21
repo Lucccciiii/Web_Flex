@@ -7,8 +7,8 @@
 </head>
 <body>
 <div id="homepage">
-    <a href="forum.php">
-        <img src="house-16.ico">
+    <a href="/Web_Flex/PHP/forum-loggedin.php">
+        <img src="/Pics/house-16.ico">
     </a>
 </div>
 <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias commodi ducimus earum, esse maxime nesciunt odio rem sapiente sit, soluta ut! Architecto consectetur ipsam iusto recusandae tenetur ullam veniam.</span><span>Accusantium aperiam eligendi et id nobis qui reiciendis reprehenderit sunt, velit vitae! At eligendi facere in incidunt obcaecati officiis, quis veniam? Aperiam architecto beatae eligendi expedita provident quae quia, quod?</span><span>Animi autem consequatur enim est itaque, labore magni nisi possimus ratione reiciendis rem, repellendus suscipit, voluptas? Ab aspernatur commodi debitis dolor, earum iusto, magni, nulla quidem quisquam sequi soluta veritatis.</span></p>

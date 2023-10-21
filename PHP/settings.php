@@ -7,8 +7,8 @@
 </head>
 <body>
 <div id="homepage">
-    <a href="forum.php">
-        <img src="house-16.ico">
+    <a href="/Web_Flex/PHP/forum-loggedin.php">
+        <img src="/Pics/house-16.ico">
     </a>
 </div>
 
