@@ -128,9 +128,15 @@
     justify-content: center;
 
 }
-#right-top-bar{
+#right-top-bar-loggedin{
     display: flex;
     flex: 1 1 auto;
+}
+#right-top-bar-guest{
+    display: flex;
+    position: absolute;
+    right: 8px;
+    top: 8px;
 }
 #notification{
     flex: 1 1 auto;
@@ -141,6 +147,14 @@
 }
 
 .settings{
+}
+
+#login{
+    flex: 1 1 auto
+}
+
+#changepassword{
+    display: flex;
 }
 
 /* Container used for text on the bottom of the screen */

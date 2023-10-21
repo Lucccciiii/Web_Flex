@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/CSS/styles.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum Hoofdpagina</title>
+    <link rel="icon" type="image/png" href="../Pics/Tracenook-ico-64x64.png">
 </head>
-<?php
-$username = "Admin";
-$title = "Admin";
-?>
 <body>
     <div id="topbar">
-        <img src="Tracenook-ico.png">
+        <img src="/Pics/Tracenook-ico.png">
         <div id="forum-title">
             <h1>
-                <?php echo "Welkom bij TraceNook &nbsp;", $title, $username?>
+                <?php echo "Welkom bij TraceNook Guest "?>
             </h1>
         </div>
-        <div id="right-top-bar">
-            <div id="notification">
-                <a href="notifications.html">Notifications</a>
-            </div>
-            <div id="account">
-                <a href="settings.html"><button class="settings">settings</button></a>
-            </div>
-        </div>
     </div>
-    <div id="newpost">
-        <form></form>
+    <div id="right-top-bar-guest">
+        <div id="login">
+            <a href="/Web_Flex/Html/login.html"><button>Login</button></a>
+        </div>
     </div>
     <div id="bottom-container">
         <div class="bottomright">
@@ -36,7 +27,7 @@ $title = "Admin";
         </div>
         <div class="bottom"><p class="times">2023 Luc Stolk | All rights reserved</p></div>
     </div>
-    <script type="text/javascript" src="time.js"></script>
+    <script type="text/javascript" src="/JS/time.js"></script>
 </body>
 
 </html>

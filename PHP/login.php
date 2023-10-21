@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $servername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
@@ -26,10 +28,10 @@ if (is_array($verify)){
     if (password_verify($password,$verify['password'])){
         $_SESSION['uname'] = $username; // $username coming from the form, such as $_POST['username']
 
-        header("Location: forum.php");
+        header("Location: checklogin.php");
     }
     else {
-        header("Location: login.html");
+        header("Location: Web_Flex/Html/login.html");
     }
 }
 

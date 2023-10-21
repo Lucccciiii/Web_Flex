@@ -1,13 +1,9 @@
 <?php
 session_start();
-
-
-$servername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbname = "flex_webdb";
 
-$username = $_SESSION[$username];
+$username = $_SESSION['uname'];
 
 try {
     $conn = new PDO("mysql:host=localhost;dbname=flex_webdb", $dbusername, $dbpassword);
@@ -18,3 +14,5 @@ try {
 
 $checkpassword = $conn->prepare("SELECT * FROM users WHERE user = :username");
 $checkpassword->bindParam(":username", $username);
+$checkpassword->execute();
+
