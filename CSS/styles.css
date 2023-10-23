@@ -116,6 +116,25 @@
     flex-grow: 2;
 }
 
+#box-changepass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#changepassword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.opassword{
+    flex-grow: 2;
+}
+.npassword{
+
+}
+
 /* Forum Styling */
 
 #topbar{

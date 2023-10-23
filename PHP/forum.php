@@ -20,6 +20,9 @@
         <div id="login">
             <a href="/Web_Flex/Html/login.html"><button>Login</button></a>
         </div>
+        <div id="register">
+            <a href="../Html/register.html"><button>Register</button></a>
+        </div>
     </div>
     <div id="bottom-container">
         <div class="bottomright">

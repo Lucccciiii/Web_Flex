@@ -31,7 +31,7 @@ if (is_array($verify)){
         header("Location: checklogin.php");
     }
     else {
-        header("Location: Web_Flex/Html/login.html");
+        header("Location: /Web_Flex/Html/login.html");
     }
 }
 

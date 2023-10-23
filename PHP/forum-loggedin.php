@@ -23,7 +23,7 @@ if ($logged = false) {
     <img src="/Pics/Tracenook-ico.png">
     <div id="forum-title">
         <h1>
-            <?php echo "Welkom bij TraceNook &nbsp;", $title[$perms]," ", $username?>
+            <?php echo "Welkom bij TraceNook ", $title[$perms]," ", $username?>
         </h1>
     </div>
     <div id="right-top-bar-loggedin">
