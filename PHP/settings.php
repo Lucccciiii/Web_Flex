@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -15,19 +19,36 @@
             </a>
         </div>
         <div id="box-changepass">
-            <form id="changepassword" method="post">
+            <form id="changepassword" method="post" action="changepassword.php">
                 <label class = "opassword" for="opass"><b>Old password</b></label>
                 <input id="opsw" type="password" placeholder="Enter old password" name="opass" required>
-
+                <div id="paserror">
+                    <?php
+                    if(isset($_GET['redirect'])) {
+                        if ($_GET['paserror'] == 1) {
+                            echo "Invalid password";
+                        }
+                        if ($_GET['paserror'] == 0){
+                            echo "New password can't be same as old password";
+                        }
+                    }
+                    ?>
+                </div>
                 <label class = "npassword" for="npass"><b>New password</b></label>
                 <input id="npsw" type="password" placeholder="Enter new password" name="npass" required>
 
                 <input type="submit">
+                <div id="passuc">
+                    <?php
+                    if(isset($_GET['redirect'])){
+                        if (isset($_GET['opsuc'])){
+                            echo "Password changed succesfully";
+                        }
+                    }
+                    ?></div>
             </form>
         </div>
     </div>
-
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, commodi corporis dolore ea itaque maiores necessitatibus neque nihil nobis non obcaecati optio porro, quo quod recusandae similique soluta voluptate. Accusamus.</span><span>Ducimus earum porro provident tempore. Assumenda deleniti dicta est, explicabo hic iste laudantium libero minus non quam quod saepe, unde vel? Debitis impedit natus officiis perferendis quisquam, sequi sint vel!</span><span>Dolores inventore natus odit perspiciatis reprehenderit saepe voluptatem. Adipisci cupiditate, eaque earum error excepturi fuga inventore molestiae natus neque obcaecati possimus provident quae quasi quia quod quos recusandae totam unde.</span></p>
 
 </body>
 </html>

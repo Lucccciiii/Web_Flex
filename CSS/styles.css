@@ -194,3 +194,9 @@
     bottom:0px;
     font-size:18px;
 }
+#passuc{
+    color: green;
+}
+#paserror{
+    color: red;
+}

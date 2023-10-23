@@ -31,7 +31,7 @@ if ($logged = false) {
             <a href="../Html/notification.html">Notifications</a>
         </div>
         <div id="account">
-            <a href="../Html/settings.html"><button class="settings">settings</button></a>
+            <a href="settings.php"><button class="settings">settings</button></a>
         </div>
         <div id="logout">
             <a href="logout.php"><button class="logout">logout</button></a>
