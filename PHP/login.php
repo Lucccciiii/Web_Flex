@@ -22,10 +22,12 @@ $login_user = $conn->prepare ("SELECT * FROM users WHERE user = :username ");
 $login_user->bindparam(":username", $username);
 $login_user->execute();
 
-$verify = $login_user->fetch(PDO::FETCH_ASSOC); /*Fetches associated values for user's username*/
+$verifyu = $login_user->fetch(PDO::FETCH_ASSOC);
+if (is_array())
+$verifyp = $login_user->fetch(PDO::FETCH_ASSOC); /*Fetches associated values for user's username*/
 
-if (is_array($verify)){
-    if (password_verify($password,$verify['password'])){
+if (is_array($verifyp)){
+    if (password_verify($password,$verifyp['password'])){
         $_SESSION['uname'] = $username; // $username coming from the form, such as $_POST['username']
 
         header("Location: checklogin.php");

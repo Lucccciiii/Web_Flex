@@ -19,7 +19,7 @@ try {
 
 if($opassword === $npassword){
     header("Location: settings.php?redirect=$redirect&paserror=0");
-    return "0"; 
+    return "0";
 }
 
 $checkpassword = $conn->prepare("SELECT * FROM users WHERE user = :username");

@@ -29,8 +29,10 @@ try {
 }
 
 /*Gets all usernames from database for verification*/
-$verify_username = $conn->prepare("SELECT user FROM users");
+$verify_username = $conn->prepare("SELECT user FROM users WHERE user = :username");
+$verify_username->bindParam(":username", $username);
 $verify_username->execute();
+
 $verify=$verify_username->fetch(PDO::FETCH_ASSOC);
 
 if(is_array($verify)){
