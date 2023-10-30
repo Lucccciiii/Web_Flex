@@ -22,8 +22,17 @@ $login_user = $conn->prepare ("SELECT * FROM users WHERE user = :username ");
 $login_user->bindparam(":username", $username);
 $login_user->execute();
 
-$verifyu = $login_user->fetch(PDO::FETCH_ASSOC);
-if (is_array())
+$sql = "SELECT COUNT(*) FROM users WHERE user = :username";
+$res = $conn->prepare($sql);
+$res->bindParam(":username", $username);
+$res->execute();
+$count = $res->fetchColumn();
+if ($count != 0){
+}
+else {
+    echo "error";
+    return 0;
+}
 $verifyp = $login_user->fetch(PDO::FETCH_ASSOC); /*Fetches associated values for user's username*/
 
 if (is_array($verifyp)){
