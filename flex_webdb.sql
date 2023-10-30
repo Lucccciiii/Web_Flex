@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2023 at 07:00 PM
+-- Generation Time: Oct 30, 2023 at 09:12 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,10 +42,13 @@ INSERT INTO `users` (`id`, `user`, `password`, `permissions`) VALUES
 (8, 'aaa', '$2y$10$o05k7QRhXdjL2vgpNA/.oOV./3lzNuddtOTP5ti0I0e0Yh57UnQwy', NULL),
 (9, 'jan', '$2y$10$TJ3pZfO0LPJ6ChKp0lc4y.oJeI.X.U6XcBeTxzteWLBechyQsaw7y', NULL),
 (10, 'piet', '$2y$10$rch9s37LIe3XOZcEKWY1LeI5IqHck4mztqGGstk4NSVvk7fZpviZi', NULL),
-(11, 'kees', '$2y$10$bJdpDYEGxg5dHRjxGlxVfuY89lfeyEYpGy21By9RPhkXIx.A/CVES', NULL),
 (13, 'kees', '$2y$10$jHOz4f2uq2KZb/f4dFDVc.A4Txy2tyJCV9aaAHRgA6sP6m6t/6exi', NULL),
 (15, 'Admin', '$2y$10$CiTWavSffpdXiL191SUc2uZDWe0sUa.G9lh0A6TSpQG9e0BKxgiBK', 0),
-(16, 'luci', '$2y$10$1zF5UtfRz.IZR.9datH3Vejl424PfOcaFcLGMpiIwsww/DtUTkFgC', NULL);
+(16, 'luci', '$2y$10$1zF5UtfRz.IZR.9datH3Vejl424PfOcaFcLGMpiIwsww/DtUTkFgC', NULL),
+(17, 'Luci', '$2y$10$Yt1FBVEaNey3N3pihYrtiu4A/sG3jCmhDBjuKSwK5/G55jcRwGkqW', NULL),
+(18, 'koen', '$2y$10$/IxzE.QSgghe9OY5ASEZBuaqTfOoMyY6IEwz0Ie.Src55QMGcI35i', 1),
+(19, 'aab', '$2y$10$R/wx81nOvRQ9CKkzfkzV0.i.QabnwwDGNPQoDZnIzgGrRQ3MT8Llu', 1),
+(21, 'aac', '$2y$10$DiQkb548kaQ2XmmYglpJfOmsemdmYs5Px3UFUyWIiBhlatJgTgEBO', 1);
 
 --
 -- Indexes for dumped tables
@@ -65,7 +68,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
