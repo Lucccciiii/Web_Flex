@@ -7,9 +7,8 @@ $username = $_SESSION['uname'];
 $opassword = $_POST['opass'];
 $npassword = $_POST['npass'];
 $redirect = "";
-$paserror = "";
 $opsuc = "";
-
+$_SESSION['redirect'] = "";
 try {
     $conn = new PDO("mysql:host=localhost;dbname=flex_webdb", $dbusername, $dbpassword);
 
@@ -18,14 +17,15 @@ try {
 }
 
 if($opassword === $npassword){
-    header("Location: settings.php?redirect=$redirect&paserror=0");
+
+    $_SESSION['passerror'] = 0;
+    header("Location: settings.php");
     return "0";
 }
 
 $checkpassword = $conn->prepare("SELECT * FROM users WHERE user = :username");
 $checkpassword->bindParam(":username", $username);
 $checkpassword->execute();
-
 $oldpassword = $checkpassword->fetch(PDO::FETCH_ASSOC);
 $npasshash = password_hash($npassword, PASSWORD_DEFAULT);
 
@@ -35,9 +35,11 @@ if (is_array($oldpassword)){
         $newpassword->bindParam(":username", $username);
         $newpassword->bindParam(":password", $npasshash);
         $newpassword->execute();
-        header("Location: settings.php?redirect=$redirect&opsuc=$opsuc");
+        $_SESSION['opsuc'] = 1;
+        header("Location: settings.php");
     }
     else {
-        header("Location: settings.php?redirect=$redirect&paserror=1");
+        $_SESSION['passerror'] = 1;
+        header("Location: settings.php");
     }
 }

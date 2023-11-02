@@ -21,25 +21,23 @@ try {
 $login_user = $conn->prepare ("SELECT * FROM users WHERE user = :username ");
 $login_user->bindparam(":username", $username);
 $login_user->execute();
+$verifyp = $login_user->fetch(PDO::FETCH_ASSOC); /*Fetches associated values for user's username*/
 
-$sql = "SELECT COUNT(*) FROM users WHERE user = :username";
-$res = $conn->prepare($sql);
-$res->bindParam(":username", $username);
-$res->execute();
-$count = $res->fetchColumn();
-if ($count != 0){
+if ($verifyp){
+
 }
 else {
     echo "error";
     return 0;
 }
-$verifyp = $login_user->fetch(PDO::FETCH_ASSOC); /*Fetches associated values for user's username*/
 
 if (is_array($verifyp)){
     if (password_verify($password,$verifyp['password'])){
         $_SESSION['uname'] = $username; // $username coming from the form, such as $_POST['username']
+        $_SESSION['permissions'] = $verifyp ['permissions'];
+        $_SESSION['Loggedin'] = true;
 
-        header("Location: checklogin.php");
+        header("Location: forum-loggedin.php");
     }
     else {
         header("Location: /Web_Flex/Html/login.html");
